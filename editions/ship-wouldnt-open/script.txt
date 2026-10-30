@@ -1,0 +1,221 @@
+# THE SHIP THAT WOULDN'T OPEN
+
+A Halloween sci-fi comedy | 3 characters | 20 beats | Approximately 3 minutes 20 seconds
+
+Characters: Professor Vex, a brilliant, impatient scientist with almost no concern for anyone's safety. Perkins, his enthusiastic but spectacularly unlucky assistant. Unit-7, a sarcastic robot whose primary objective is self-preservation.
+
+Lighting: Three lights: G (ground), L (left tree), R (right tree), plus fog. Each beat lasts roughly 10 seconds, ending with a sound and lighting effect. All action is conveyed through audio and lights.
+
+### Act I: The obvious solutions
+
+1\. The discovery 0:00
+
+PROFESSOR: "There she is. Class-nine extraterrestrial spacecraft. Perkins, we're getting inside."
+
+PERKINS: "How?"
+
+ROBOT: "Historically? At the cost of the professor's assistant."
+
+&#x20;FX: Deep alien hum. Slow cyan sweeps across L and R. G pulses green.
+
+2\. Try the door 0:10
+
+PROFESSOR: "Let's not overcomplicate this. Perkins, pull the handle."
+
+PERKINS: "Oh, sure, I can just... AAAAGH!"
+
+&#x20;FX: Sharp electrical ZZZZAP! Blinding white-blue burst across all three lights.
+
+3\. Scientific analysis 0:20
+
+PROFESSOR: "Interesting. A high-voltage bioelectric deterrent. Quite sophisticated."
+
+ROBOT: "There's a lightning bolt painted on the door."
+
+PROFESSOR: "Yes, thank you."
+
+&#x20;FX: No effect. Steady workshop glow and room tone until the crowbar payoff.
+
+4\. The crowbar 0:30
+
+PROFESSOR: "Fine. We'll use mechanical leverage. Perkins, the crowbar."
+
+PERKINS: "Got it. One... two... THREE!"
+
+&#x20;FX: Metal CLANG! Alien security alarm. Alternating aggressive red sweeps on L and R.
+
+5\. The alarm 0:40
+
+PERKINS: "IS THAT BAD?!"
+
+PROFESSOR: "Just a proximity alarm."
+
+ROBOT: "It's broadcasting our coordinates to eleven hostile civilizations. Twelve now."
+
+FX UNDER LINE: Technical beep-boop transmission begins on “broadcasting,” with cyan light pulses.
+
+&#x20;FX: Warbling alien digital alarm, pitch-jumping pulses and electronic chirps, synchronized with rapid red light pulses.
+
+### Act II: Science makes everything worse
+
+6\. The blowtorch 0:50
+
+PROFESSOR: "Let's introduce some heat. Perkins, fire up the plasma torch."
+
+PERKINS: "Finally, something I'm qualified to..."
+
+&#x20;FX: Torch WHOOSH, rising whine, enormous BOOM! G orange, L/R intense white-orange bursts. Fog blast.
+
+7\. More scientific analysis 1:00
+
+PROFESSOR: "Ah! The hull anticipates thermal attacks three seconds before they occur."
+
+ROBOT: "Fascinating. It anticipated Perkins being on fire."
+
+&#x20;FX: Small sputtering flames, smoky orange flickers. Perkins coughs.
+
+8\. Freeze it
+
+PROFESSOR: "Perkins, pour the liquid nitrogen onto the hull."
+
+PERKINS: "Right, sir. Pouring it on now..."
+
+FX: Splash onto the hull, freezing HISSSS and crystalline crackle. Blue-white light waves.
+
+PERKINS (over the effect): "Ah! It splashed back! My boots are frozen!"
+
+ROBOT: "Excellent. You cannot run away now."
+
+9\. The mystery port 1:20
+
+PROFESSOR: "There's a maintenance port beneath the engine. Twist that valve."
+
+PERKINS: "It's opening! Oh. Oh, that's... green."
+
+&#x20;FX: Metallic click, wet GLORP-GLORP. Sickly green pulses across G, L and R.
+
+10\. The alien goo 1:30
+
+PERKINS: "Professor, the goo is eating my shoe!"
+
+PROFESSOR: "Stop exaggerating."
+
+ROBOT: "You'll need to throw those shoes away. They look like they're infected."
+
+&#x20;FX: Bubbling, sizzling, tiny monstrous BURP. Uneven green and purple flickers.
+
+### Act III: Contacting the mothership
+
+11\. The mysterious knob 1:40
+
+PROFESSOR: "Aha! An interstellar communications dial. This could be our way in."
+
+ROBOT: "Or an excellent way to summon something."
+
+&#x20;FX: Heavy switch CLICK. Deep oscillating signal, cyan beams sweeping L and R.
+
+12\. First contact 1:50
+
+ALIEN TRANSMISSION: Two aliens exchange short phrases in an unintelligible language: a throaty bubbling voice, a nasal questioning reply, then an impatient response.
+
+PERKINS: "Professor? Is it talking to us?"
+
+ROBOT: "Regrettably."
+
+&#x20;FX: Organic alien chatter, synchronized purple, green and white pulses following the voices.
+
+13\. Translation 2:00
+
+PROFESSOR: "Unit-7, translate."
+
+ROBOT: "The mothership says this vessel is overdue for inspection."
+
+PERKINS: "By how much?"
+
+ROBOT: "Four thousand years."
+
+&#x20;FX: Low alien chatter, descending electronic tones. Purple pulses fade to red.
+
+14\. The diplomatic approach 2:10
+
+PROFESSOR: "Tell them we're authorized technicians."
+
+ROBOT: "I told them we're contagious."
+
+PROFESSOR: "WHY?"
+
+ROBOT: "They've disconnected."
+
+&#x20;FX: Disgruntled alien radio reply, soft descending disconnect tones and click; brief blackout, then one red pulse.
+
+### Act IV: Desperation
+
+15\. Starting the engines 2:20
+
+PROFESSOR: "Wait. The engines! Their startup cycle might release the door locks."
+
+PERKINS: "Are the engines firing up? Look out!"
+
+&#x20;FX: Engine turbines spool up, thunderous fiery WHOOMPH! G red-orange, L/R searing white. Fog blast.
+
+16\. The eyebrows 2:30
+
+PERKINS: "MY EYEBROWS! MY EYEBROWS ARE GONE!"
+
+PROFESSOR: "Interesting. The propulsion system is entirely functional."
+
+ROBOT: "Unlike Perkins' face."
+
+&#x20;FX: Engines wind down, sputtering flames and crackling static. Orange fades to darkness.
+
+17\. One last technological solution 2:40
+
+PROFESSOR: "We'll bypass the lock with a quantum phase inverter."
+
+ROBOT: "You brought one?"
+
+PROFESSOR: "I brought Perkins."
+
+&#x20;FX: Warbling dimensional tone, rapid purple-blue alternations. Perkins yelps as the field snaps off.
+
+18\. The professor thinks 2:50
+
+PROFESSOR: "Why won't it open? Electricity, heat, leverage, quantum manipulation... we've tried everything."
+
+ROBOT: "You haven't tried leaving."
+
+&#x20;FX: Slow electronic heartbeat. Dim cyan pulses alternate between L and R.
+
+### Act V: The breakthrough
+
+19\. The revelation 3:00
+
+PROFESSOR: "Wait. That symbol! It's not an intergalactic warning. It's a ceremonial offering glyph!"
+
+PERKINS: "Like... candy?"
+
+PROFESSOR: "Exactly!"
+
+&#x20;FX: Sudden discovery chime, golden light spreads from G upward through L and R.
+
+20\. The door finally opens 3:10
+
+PERKINS: "TRICK OR TREAT!"
+
+ALIENS (several strange voices together, emerging from the hatch): "TRICK OR TREAT!"
+
+&#x20;FX: Enormous hydraulic door GROAN. Brilliant green-white light floods all three lights. Heavy fog, triumphant alien fanfare, then a sudden metallic SLAM and blackout.
+
+## A few production notes
+
+The important thing about this script is that the lights are the payoff, not the dialogue. Each interaction sets up a visual event quickly enough that a passerby can enjoy it without knowing what happened previously.
+
+I'd build the production around three principles:
+
+- Short dialogue, exaggerated consequences. The shocks, explosions, alarms, goo and alien transmissions should be significantly louder and more dramatic than the preceding dialogue.
+- Different visual signatures for different technology. Electrical systems use blue-white, alarms use red, alien communications use purple and cyan, engine exhaust uses orange-white, and biological material uses green.
+- A satisfying loop. The final hatch slam and blackout can lead naturally into the first ominous hum when the sequence starts over.
+
+One additional creative opportunity: give the ship its own distinct audio personality. Its machinery could sound like an enormous, ancient intelligence reluctantly dealing with three exceptionally incompetent visitors. That makes the tree feel like it's hiding something genuinely gigantic, rather than just responding to three people talking.
+
+Playback: Leave about two seconds between scenes. After the ending, play five minutes of workshop ambience without dialogue, with steady glow and occasional ground accents, then restart.

@@ -1,0 +1,7 @@
+__pycache__/
+.DS_Store
+.env
+.env.*
+lights.json
+light-assignments.json
+light-assignments.tmp

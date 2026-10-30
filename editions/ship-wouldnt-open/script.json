@@ -1,0 +1,406 @@
+{
+  "title": "The Ship That Wouldn't Open",
+  "cast": {
+    "Professor": "JBFqnCBsd6RMkjVDRZzb",
+    "Private Perkins": "467tX2b9Bky3cD6jXpNa",
+    "Safety Bot": "weA4Q36twV5kwSaTEL0Q",
+    "Ship": "weA4Q36twV5kwSaTEL0Q"
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "title": "The discovery",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] There she is. Class-nine extraterrestrial spacecraft. Perkins, we're getting inside."
+        },
+        {
+          "role": "Private Perkins",
+          "text": "[nervous] How?"
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] Historically? At the cost of the professor's assistant."
+        }
+      ],
+      "effect": "beat-01",
+      "effect_seconds": 5,
+      "direction": "Deep alien hum. Slow cyan sweeps across L and R. G pulses green."
+    },
+    {
+      "id": 2,
+      "title": "Try the door",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Let's not overcomplicate this. Perkins, pull the handle."
+        },
+        {
+          "role": "Private Perkins",
+          "text": "[hesitant] Oh, sure, I can just..."
+        },
+        {
+          "role": "Private Perkins",
+          "text": "[shouts] AAAAGH!",
+          "reaction": true
+        }
+      ],
+      "effect": "beat-02",
+      "effect_seconds": 4,
+      "direction": "Sharp electrical ZZZZAP! Blinding white-blue burst across all three lights."
+    },
+    {
+      "id": 3,
+      "title": "Scientific analysis",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Interesting. A high-voltage bioelectric deterrent. Quite sophisticated."
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] There's a lightning bolt painted on the door."
+        },
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Yes, thank you."
+        }
+      ],
+      "effect": "beat-03",
+      "effect_seconds": 3,
+      "direction": "No effect. Steady workshop glow and room tone; next sound and light payoff is the crowbar."
+    },
+    {
+      "id": 4,
+      "title": "The crowbar",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Fine. We'll use mechanical leverage. Perkins, the crowbar."
+        },
+        {
+          "role": "Private Perkins",
+          "text": "[nervous] Got it. One... two... THREE!"
+        }
+      ],
+      "effect": "beat-04",
+      "effect_seconds": 5,
+      "direction": "Metal CLANG! Alien security alarm. Alternating aggressive red sweeps on L and R."
+    },
+    {
+      "id": 5,
+      "title": "The alarm",
+      "lines": [
+        {
+          "role": "Private Perkins",
+          "text": "[nervous] IS THAT BAD?!"
+        },
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Just a proximity alarm."
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] It's broadcasting our coordinates to eleven hostile civilizations. Twelve now."
+        }
+      ],
+      "effect": "beat-05",
+      "effect_seconds": 5,
+      "direction": "Technical transmission beeps on broadcasting, then warbling alien digital alarm with red pulses."
+    },
+    {
+      "id": 6,
+      "title": "The blowtorch",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Let's introduce some heat. Perkins, fire up the plasma torch."
+        },
+        {
+          "role": "Private Perkins",
+          "text": "[nervous] Finally, something I'm qualified to..."
+        }
+      ],
+      "effect": "beat-06",
+      "effect_seconds": 6,
+      "direction": "Torch WHOOSH, rising whine, enormous BOOM! G orange, L/R intense white-orange bursts. Fog blast."
+    },
+    {
+      "id": 7,
+      "title": "More scientific analysis",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Ah! The hull anticipates thermal attacks three seconds before they occur."
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] Fascinating. It anticipated Perkins being on fire."
+        }
+      ],
+      "effect": "beat-07",
+      "effect_seconds": 3,
+      "direction": "Small sputtering flames, smoky orange flickers. Perkins coughs."
+    },
+    {
+      "id": 8,
+      "title": "Freeze it",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[instructing] Perkins, pour the liquid nitrogen onto the hull."
+        },
+        {
+          "role": "Private Perkins",
+          "text": "[hesitant] Right, sir. Pouring it on now..."
+        },
+        {
+          "role": "Private Perkins",
+          "text": "[shouts] Ah! It splashed back! My boots are frozen!",
+          "reaction": true
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] Excellent. You cannot run away now."
+        }
+      ],
+      "effect": "beat-08",
+      "effect_seconds": 5,
+      "direction": "Liquid splashes onto the hull, immediate freezing hiss and crystalline crackle. Blue-white waves follow the sound. Perkins reacts during the freezing effect."
+    },
+    {
+      "id": 9,
+      "title": "The mystery port",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] There's a maintenance port beneath the engine. Twist that valve."
+        },
+        {
+          "role": "Private Perkins",
+          "text": "[nervous] It's opening! Oh. Oh, that's... green."
+        }
+      ],
+      "effect": "beat-09",
+      "effect_seconds": 5,
+      "direction": "Metallic click, wet GLORP-GLORP. Sickly green pulses across G, L and R."
+    },
+    {
+      "id": 10,
+      "title": "The alien goo",
+      "lines": [
+        {
+          "role": "Private Perkins",
+          "text": "[nervous] Professor, the goo is eating my shoe!"
+        },
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Stop exaggerating."
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] You'll need to throw those shoes away. They look like they're infected."
+        }
+      ],
+      "effect": "beat-10",
+      "effect_seconds": 4,
+      "direction": "Bubbling, sizzling, tiny monstrous BURP. Uneven green and purple flickers."
+    },
+    {
+      "id": 11,
+      "title": "The mysterious knob",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Aha! An interstellar communications dial. This could be our way in."
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] Or an excellent way to summon something."
+        }
+      ],
+      "effect": "beat-11",
+      "effect_seconds": 5,
+      "direction": "Heavy switch CLICK. Deep oscillating signal, cyan beams sweeping L and R."
+    },
+    {
+      "id": 12,
+      "title": "First contact",
+      "lines": [
+        {
+          "role": "Private Perkins",
+          "text": "[nervous] Professor? Is it talking to us?"
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] Regrettably."
+        }
+      ],
+      "effect": "beat-12",
+      "effect_seconds": 5,
+      "direction": "Organic alien conversation over the radio: throaty bubbling speaker, nasal questioning reply, impatient response. Purple and green light pulses track the vocal syllables."
+    },
+    {
+      "id": 13,
+      "title": "Translation",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Unit-7, translate."
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] The mothership says this vessel is overdue for inspection."
+        },
+        {
+          "role": "Private Perkins",
+          "text": "[nervous] By how much?"
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] Four thousand years."
+        }
+      ],
+      "effect": "beat-13",
+      "effect_seconds": 4,
+      "direction": "Low alien chatter, descending electronic tones. Purple pulses fade to red."
+    },
+    {
+      "id": 14,
+      "title": "The diplomatic approach",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Tell them we're authorized technicians."
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] I told them we're contagious."
+        },
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] WHY?"
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] They've disconnected."
+        }
+      ],
+      "effect": "beat-14",
+      "effect_seconds": 4,
+      "direction": "Disgruntled alien radio reply, soft descending disconnect tones and a click; brief blackout then one red pulse."
+    },
+    {
+      "id": 15,
+      "title": "Starting the engines",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Wait. The engines! Their startup cycle might release the door locks."
+        },
+        {
+          "role": "Private Perkins",
+          "text": "[alarmed] Are the engines firing up? Look out!"
+        }
+      ],
+      "effect": "beat-15",
+      "effect_seconds": 7,
+      "direction": "Engine turbines spool up, thunderous fiery WHOOMPH! G red-orange, L/R searing white. Fog blast."
+    },
+    {
+      "id": 16,
+      "title": "The eyebrows",
+      "lines": [
+        {
+          "role": "Private Perkins",
+          "text": "[nervous] MY EYEBROWS! MY EYEBROWS ARE GONE!"
+        },
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Interesting. The propulsion system is entirely functional."
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] Unlike Perkins' face."
+        }
+      ],
+      "effect": "beat-16",
+      "effect_seconds": 4,
+      "direction": "Engines wind down, sputtering flames and crackling static. Orange fades to darkness."
+    },
+    {
+      "id": 17,
+      "title": "One last technological solution",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] We'll bypass the lock with a quantum phase inverter."
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] You brought one?"
+        },
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] I brought Perkins."
+        }
+      ],
+      "effect": "beat-17",
+      "effect_seconds": 5,
+      "direction": "Warbling dimensional tone, rapid purple-blue alternations. Perkins yelps as the field snaps off."
+    },
+    {
+      "id": 18,
+      "title": "The professor thinks",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Why won't it open? Electricity, heat, leverage, quantum manipulation... we've tried everything."
+        },
+        {
+          "role": "Safety Bot",
+          "text": "[dryly] You haven't tried leaving."
+        }
+      ],
+      "effect": "beat-18",
+      "effect_seconds": 4,
+      "direction": "Slow electronic heartbeat. Dim cyan pulses alternate between L and R."
+    },
+    {
+      "id": 19,
+      "title": "The revelation",
+      "lines": [
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Wait. That symbol! It's not an intergalactic warning. It's a ceremonial offering glyph!"
+        },
+        {
+          "role": "Private Perkins",
+          "text": "[nervous] Like... candy?"
+        },
+        {
+          "role": "Professor",
+          "text": "[matter-of-fact] Exactly!"
+        }
+      ],
+      "effect": "beat-19",
+      "effect_seconds": 4,
+      "direction": "Sudden discovery chime, golden light spreads from G upward through L and R."
+    },
+    {
+      "id": 20,
+      "title": "The door finally opens",
+      "lines": [
+        {
+          "role": "Private Perkins",
+          "text": "[nervous] TRICK OR TREAT!"
+        }
+      ],
+      "effect": "beat-20",
+      "effect_seconds": 8,
+      "direction": "Hydraulic hatch opens, little alien footsteps emerge, then several aliens call Trick or treat together. Green-white reveal pulses follow the chorus; door settles shut and lights fade for the loop.",
+      "alien_chorus": "Trick or treat!"
+    }
+  ]
+}
