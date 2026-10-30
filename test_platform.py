@@ -27,7 +27,7 @@ class DiscoveryTests(unittest.TestCase):
             self.assertIn('192.0.2.255',lifx.broadcast_addresses())
     @unittest.skipUnless(sys.platform=='win32','Windows adapter integration')
     def test_real_windows_adapters(self):
-        command='Get-NetIPAddress -AddressFamily IPv4 | Select-Object IPAddress,PrefixLength | ConvertTo-Json -Compress'
+        command="[System.Net.NetworkInformation.NetworkInterface]::GetAllNetworkInterfaces() | ForEach-Object { $_.GetIPProperties().UnicastAddresses } | Where-Object { $_.Address.AddressFamily -eq 'InterNetwork' } | Select-Object @{Name='IPAddress';Expression={$_.Address.IPAddressToString}},@{Name='Mask';Expression={$_.IPv4Mask.IPAddressToString}} | ConvertTo-Json -Compress"
         rows=json.loads(subprocess.check_output(['powershell.exe','-NoProfile','-NonInteractive','-Command',command],text=True,timeout=10))
         self.assertTrue(rows)
         self.assertGreater(len(lifx.broadcast_addresses()),1)

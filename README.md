@@ -32,7 +32,7 @@ After cloning, ask: “Read README.md and run Spaceship-LIFX on this machine. Us
 
 ### Windows networking
 
-Discovery uses Windows PowerShell's built-in `Get-NetIPAddress` command to find local broadcast addresses, with limited broadcast as a fallback. It does not change PowerShell execution policy. If prompted by Windows Firewall, allow Python on your trusted private home network to use LIFX lights. Managed-device restrictions, VPN routing, and Wi-Fi client isolation can prevent discovery; audio preview still works. Follow your organization's policy rather than disabling firewall or endpoint protections.
+Discovery uses Windows PowerShell and .NET's built-in network-interface API to find local broadcast addresses, with limited broadcast as a fallback. It does not change PowerShell execution policy. If prompted by Windows Firewall, allow Python on your trusted private home network to use LIFX lights. Managed-device restrictions, VPN routing, and Wi-Fi client isolation can prevent discovery; audio preview still works. Follow your organization's policy rather than disabling firewall or endpoint protections.
 
 Prevent system sleep during a show. The Mac launcher handles idle sleep; on Windows, configure sleep through your usual approved settings. Use **Reset** while the server is still running to restore lights; forcibly closing the console or shutting down the PC cannot guarantee restoration.
 

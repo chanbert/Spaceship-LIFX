@@ -31,12 +31,12 @@ def broadcast_addresses():
  try:
   if sys.platform == 'win32':
    # Structured output avoids localized ipconfig headings. No script-policy changes.
-   command="Get-NetIPAddress -AddressFamily IPv4 | Select-Object IPAddress,PrefixLength | ConvertTo-Json -Compress"
+   command="[System.Net.NetworkInformation.NetworkInterface]::GetAllNetworkInterfaces() | ForEach-Object { $_.GetIPProperties().UnicastAddresses } | Where-Object { $_.Address.AddressFamily -eq 'InterNetwork' } | Select-Object @{Name='IPAddress';Expression={$_.Address.IPAddressToString}},@{Name='Mask';Expression={$_.IPv4Mask.IPAddressToString}} | ConvertTo-Json -Compress"
    output=subprocess.check_output(['powershell.exe','-NoProfile','-NonInteractive','-Command',command],text=True,timeout=10)
    rows=json.loads(output or '[]')
    if isinstance(rows,dict):rows=[rows]
    for row in rows:
-    interface=ipaddress.ip_interface(str(row['IPAddress'])+'/'+str(row['PrefixLength']))
+    interface=ipaddress.ip_interface(str(row['IPAddress'])+'/'+str(row.get('Mask',row.get('PrefixLength'))))
     if not interface.ip.is_loopback and interface.network.prefixlen<31:
      broadcasts.add(str(interface.network.broadcast_address))
   else:
