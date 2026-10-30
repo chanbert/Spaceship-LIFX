@@ -1,5 +1,5 @@
 """Small LIFX LAN client. Discovery is read-only; all writes require explicit targets."""
-import math, json, re, socket, struct, subprocess, time
+import math, json, re, socket, struct, subprocess, time, sys, ipaddress
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 SOURCE=0x48414c4c
@@ -25,10 +25,30 @@ def merge_discovered(previous, found):
   registry[d['mac']]={**registry.get(d['mac'],{}),**d,'online':True,'last_seen':now}
  return sorted(registry.values(),key=lambda d:d.get('label',d['mac']))
 
+def broadcast_addresses():
+ """Directed broadcasts for active interfaces, plus a portable fallback."""
+ broadcasts={'255.255.255.255'}
+ try:
+  if sys.platform == 'win32':
+   # Structured output avoids localized ipconfig headings. No script-policy changes.
+   command="Get-NetIPAddress -AddressFamily IPv4 | Select-Object IPAddress,PrefixLength | ConvertTo-Json -Compress"
+   output=subprocess.check_output(['powershell.exe','-NoProfile','-NonInteractive','-Command',command],text=True,timeout=10)
+   rows=json.loads(output or '[]')
+   if isinstance(rows,dict):rows=[rows]
+   for row in rows:
+    interface=ipaddress.ip_interface(str(row['IPAddress'])+'/'+str(row['PrefixLength']))
+    if not interface.ip.is_loopback and interface.network.prefixlen<31:
+     broadcasts.add(str(interface.network.broadcast_address))
+  else:
+   output=subprocess.check_output(['/sbin/ifconfig'],text=True,timeout=10)
+   broadcasts.update(re.findall(r'broadcast (\d+\.\d+\.\d+\.\d+)',output))
+ except (OSError,subprocess.SubprocessError,ValueError,KeyError,TypeError):
+  pass  # Limited broadcast still works on many single-interface networks.
+ return broadcasts
+
 def discover(seconds=8):
  found={}
- interfaces=subprocess.check_output(['/sbin/ifconfig'],text=True)
- broadcasts=set(re.findall(r'broadcast (\d+\.\d+\.\d+\.\d+)',interfaces))|{'255.255.255.255'}
+ broadcasts=broadcast_addresses()
  with socket.socket(socket.AF_INET,socket.SOCK_DGRAM) as s:
   s.setsockopt(socket.SOL_SOCKET,socket.SO_BROADCAST,1);s.bind(('',0));s.settimeout(.15)
   end=time.monotonic()+seconds;last=0
@@ -52,7 +72,7 @@ def discover(seconds=8):
    if kind==25 and len(d)>=68:x['label']=d[36:68].split(b'\0')[0].decode(errors='replace')
    if kind==33 and len(d)>=48:x['product']=struct.unpack_from('<I',d,40)[0]
    if kind==53 and len(d)>=84:x['group']=d[52:84].split(b'\0')[0].decode(errors='replace')
- previous=json.loads((ROOT/'lights.json').read_text()) if (ROOT/'lights.json').exists() else []
+ previous=json.loads((ROOT/'lights.json').read_text(encoding='utf-8')) if (ROOT/'lights.json').exists() else []
  result=merge_discovered(previous,list(found.values()))
  (ROOT/'lights.json').write_text(json.dumps(result,indent=2));return result
 

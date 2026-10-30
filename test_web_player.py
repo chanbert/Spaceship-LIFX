@@ -61,7 +61,7 @@ class Tests(unittest.TestCase):
         s=web.SHOW
         with wave.open(str(web.EDITION/'audio/demo.wav')) as f:
             self.assertAlmostEqual(f.getnframes()/f.getframerate(),s['duration'],places=2)
-        self.assertEqual(len([e for e in s['events'] if not e.get('intermission')]),len(json.loads((web.EDITION/'script.json').read_text())['scenes']))
+        self.assertEqual(len([e for e in s['events'] if not e.get('intermission')]),len(json.loads((web.EDITION/'script.json').read_text(encoding='utf-8'))['scenes']))
         self.assertTrue(all(0<=c['time']<s['duration'] for c in s['cues']))
         self.assertTrue(all(l['time']<l['end']<=s['duration'] for l in s['lines']))
         self.assertTrue(all(e['next_scene']-e['quiet_start']<14 for e in s['events'] if not e.get('intermission')))

@@ -6,18 +6,35 @@ A local Halloween spaceship show with synchronized dialogue, sound effects, and 
 
 ## Get started
 
-1. [Download the latest release](https://github.com/chanbert/Spaceship-LIFX/releases/latest) and unzip **Spaceship-LIFX-macOS.zip**.
-2. On a Mac with Python 3.9 or newer, double-click **Start Web Player.command**. Keep its Terminal window open.
-3. Open **http://127.0.0.1:8765** if the browser does not open automatically.
-4. Press **Play** to preview the complete 10-minute, 23-second show. No lights or API keys are required.
+Clone this repository or [download a release ZIP](https://github.com/chanbert/Spaceship-LIFX/releases/latest). Both platforms use the same app and included audio. Extract the entire ZIP before running it.
 
-Alternatively, from the extracted folder:
+| Platform | Double-click launcher | Terminal alternative |
+| --- | --- | --- |
+| Windows | `Start Web Player.bat` | `py -3 web_server.py` |
+| macOS | `Start Web Player.command` | `python3 web_server.py` |
+
+Requires Python **3.9 or newer** and a modern browser (Edge, Chrome, or Safari). If Python is missing, use your organization's approved software source. No `pip`, npm, API key, administrator privileges, or third-party Python packages are needed. The Windows launcher tries `py -3`, then `python`, and displays guidance if neither works.
+
+For a clone:
 
 ```sh
-python3 web_server.py
+git clone https://github.com/chanbert/Spaceship-LIFX.git
+cd Spaceship-LIFX
 ```
 
-Playback uses only Python's standard library and the included audio; there are no packages to install. macOS is the supported platform for LAN discovery and the launcher. A modern browser with WAV playback is required. Select your speaker in macOS Sound settings before starting.
+Run the command for your platform from the table above. Keep the server window open. The browser opens at **http://127.0.0.1:8765**. Press **Play** to preview the complete 10:23 show without lights. Choose your speaker in the operating system's sound settings.
+
+If port 8765 is already occupied, close the other player or use `--port 8766`. `--no-browser` suppresses automatic browser opening. Press **Reset** before stopping the server with Ctrl+C.
+
+### Using Copilot
+
+After cloning, ask: “Read README.md and run Spaceship-LIFX on this machine. Use the installed Python 3.9+ interpreter; no package installation is necessary. Start in preview mode and do not enable real lights.”
+
+### Windows networking
+
+Discovery uses Windows PowerShell's built-in `Get-NetIPAddress` command to find local broadcast addresses, with limited broadcast as a fallback. It does not change PowerShell execution policy. If prompted by Windows Firewall, allow Python on your trusted private home network to use LIFX lights. Managed-device restrictions, VPN routing, and Wi-Fi client isolation can prevent discovery; audio preview still works. Follow your organization's policy rather than disabling firewall or endpoint protections.
+
+Prevent system sleep during a show. The Mac launcher handles idle sleep; on Windows, configure sleep through your usual approved settings. Use **Reset** while the server is still running to restore lights; forcibly closing the console or shutting down the PC cannot guarantee restoration.
 
 ## Connect your lights
 
@@ -48,7 +65,7 @@ Run the hardware-independent checks:
 python3 -m unittest discover -v
 ```
 
-Tests use synthetic device IDs and mocked lighting commands. The audio generation pipeline is not included; the finished WAV is ready to play.
+GitHub Actions runs the tests on Windows and macOS using preinstalled Python. The suite starts the Windows batch launcher from a path containing spaces, checks HTTP/audio delivery and clean defaults, and validates adapter discovery. Tests use synthetic device IDs and mocked lighting commands. Real LIFX discovery, audio output, and restoration on a managed Windows laptop still require a hardware smoke test. The audio generation pipeline is not included; the finished WAV is ready to play.
 
 ## Credits
 

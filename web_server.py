@@ -1,4 +1,5 @@
 """Loopback-only show player. Browser owns audio; server schedules LIFX cues."""
+import argparse
 import bisect, json, secrets, threading, time, webbrowser, signal, sys, re, os
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
@@ -7,8 +8,8 @@ from lifx import Lights, discover, CaptureError
 
 ROOT = Path(__file__).resolve().parent
 EDITION = ROOT / 'editions/ship-wouldnt-open'
-SHOW = json.loads((EDITION / 'show.json').read_text())
-WORDS = json.loads((EDITION / 'words.json').read_text())
+SHOW = json.loads((EDITION / 'show.json').read_text(encoding='utf-8'))
+WORDS = json.loads((EDITION / 'words.json').read_text(encoding='utf-8'))
 TOKEN = secrets.token_urlsafe(32)
 PORT = 8765
 ROLES = {
@@ -28,7 +29,7 @@ def validate_assignments(assignments):
 
 def read_assignments():
     with MAPPING_LOCK:
-        if MAPPING_PATH.exists(): return validate_assignments(json.loads(MAPPING_PATH.read_text()))
+        if MAPPING_PATH.exists(): return validate_assignments(json.loads(MAPPING_PATH.read_text(encoding='utf-8')))
         return {}
 
 def save_assignments(assignments):
@@ -41,7 +42,7 @@ def save_assignments(assignments):
 
 def read_devices():
     path = ROOT / 'lights.json'
-    return json.loads(path.read_text()) if path.exists() else []
+    return json.loads(path.read_text(encoding='utf-8')) if path.exists() else []
 
 def targets(cue):
     return cue.get('roles', list(ROLES))
@@ -240,14 +241,26 @@ class Handler(BaseHTTPRequestHandler):
         except Exception as e: return self.json({'error': str(e)}, 400)
 
 def main():
-    server = ThreadingHTTPServer(('127.0.0.1', PORT), Handler)
+    global PORT
+    parser = argparse.ArgumentParser(description='Local Spaceship-LIFX player')
+    parser.add_argument('--port', type=int, default=8765)
+    parser.add_argument('--no-browser', action='store_true')
+    args = parser.parse_args()
+    if not 1 <= args.port <= 65535: parser.error('port must be between 1 and 65535')
+    PORT = args.port
+    try:
+        server = ThreadingHTTPServer(('127.0.0.1', PORT), Handler)
+    except OSError as error:
+        print(f'Could not start on port {PORT}: {error}. Close another player instance and try again.', file=sys.stderr)
+        return 1
     threading.Thread(target=lighting.run, daemon=True).start()
-    print(f'Halloween player: http://127.0.0.1:{PORT}', flush=True)
+    print(f'Spaceship-LIFX: http://127.0.0.1:{PORT}', flush=True)
     if '--no-browser' not in sys.argv: webbrowser.open(f'http://127.0.0.1:{PORT}')
     def shutdown(signum, frame):
         lighting.stop()
         raise SystemExit(0)
     signal.signal(signal.SIGTERM, shutdown)
     try: server.serve_forever()
+    except KeyboardInterrupt: pass
     finally: lighting.stop(); server.server_close()
-if __name__ == '__main__': main()
+if __name__ == '__main__': sys.exit(main())
