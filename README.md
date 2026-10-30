@@ -2,7 +2,7 @@
 
 A local Halloween spaceship show with synchronized dialogue, sound effects, and LIFX lighting. Follow the Professor, Private Perkins, and Unit-7 as they try to open an extraterrestrial spacecraft.
 
-![Spaceship player with synchronized timeline, light preview, and dialogue](docs/screenshots/player.jpg)
+![Spaceship player with synchronized timeline, light preview, and dialogue](docs/screenshots/demo.png)
 
 ## Get started
 
@@ -31,7 +31,7 @@ Click timeline cues or dialogue words to seek. **Reset** stops playback and rest
 
 ## Privacy and local data
 
-Fresh installs contain no saved devices or assignments. Discovery creates `lights.json` locally (device IDs, names, network addresses, and discovery metadata). Role choices are stored in `light-assignments.json`. Both files, temporary assignments, and `.env` files are ignored by Git. Do not attach these files when sharing a copy or reporting an issue.
+Fresh installs contain no saved devices or assignments. The main screenshot illustrates an example configured rig; its display names are not shipped as app configuration. Discovery creates `lights.json` locally (device IDs, names, network addresses, and discovery metadata). Role choices are stored in `light-assignments.json`. Both files, temporary assignments, and `.env` files are ignored by Git. Do not attach these files when sharing a copy or reporting an issue.
 
 The server listens only on loopback. Playback needs no cloud service, account, API key, or internet connection. LIFX control uses local UDP. This repository includes the finished show, not private generation credentials, voice-production caches, earlier experiments, or the original installation's device data.
 
