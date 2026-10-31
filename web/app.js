@@ -1,7 +1,30 @@
 const $=id=>document.getElementById(id),audio=$('audio');
 let assignments={},roleInfo={},deviceList=[],saveQueue=Promise.resolve();
 let show,words={},token,session=null,seq=0,lastScene=-1,lastLine=-1,busy=false,clockBusy=false,windowStart=0,span=30,needsTimeline=true,scriptNodes=[],wordNodes=[],timelineWordNodes=[];
-$('editLights').onclick=()=>$('lightSettings').showModal();
+async function openLightSettings(){
+ if(busy)return;
+ busy=true;
+ $('lightSettings').showModal();
+ lockSettings(true);
+ audio.pause();
+ $('mappingStatus').textContent='Restoring lights before editing…';
+ let ready=false;
+ try{
+  await api('stop');
+  session=null;
+  $('lightingNotice').hidden=true;
+  $('mode').textContent='PREVIEW · NO LIGHT COMMANDS';
+  $('mappingStatus').textContent='Ready to edit. Enable selected lights when finished.';
+  ready=true;
+ }catch(e){
+  $('mappingStatus').textContent='Could not unlock lights: '+e.message+'. Close this menu and try again.';
+  status(e.message,true);
+ }finally{
+  busy=false;
+  lockSettings(!ready);
+ }
+}
+$('editLights').onclick=openLightSettings;
 $('closeLights').onclick=()=>$('lightSettings').close();
 $('lightSettings').addEventListener('click',e=>{if(e.target===$('lightSettings')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close()}});
 const fmt=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
@@ -39,7 +62,7 @@ function selection(){
 }
 function saveMapping(){
  const snapshot={...assignments};$('mappingStatus').textContent='Saving assignments…';
- saveQueue=saveQueue.catch(()=>{}).then(()=>api('assignments',{assignments:snapshot})).then(()=>{$('mappingStatus').textContent='Assignments saved on this Mac.';}).catch(e=>{$('mappingStatus').textContent='Could not save: '+e.message;status(e.message,true)});
+ saveQueue=saveQueue.catch(()=>{}).then(()=>api('assignments',{assignments:snapshot})).then(()=>{$('mappingStatus').textContent='Assignments saved on this computer.';}).catch(e=>{$('mappingStatus').textContent='Could not save: '+e.message;status(e.message,true)});
 }
 let pickedLight=null;
 function devices(list){

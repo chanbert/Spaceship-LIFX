@@ -38,6 +38,8 @@ Prevent system sleep during a show. The Mac launcher handles idle sleep; on Wind
 
 ## Connect your lights
 
+Opening **Light config** pauses playback, restores enabled lights, and unlocks assignments without changing your playback position. After editing, enable the lights again and press Play to resume.
+
 Open **Light config**, click **Rescan network**, then drag discovered lights into **Ground**, **Tree 1**, or **Tree 2**. You can also click a light and then its destination. Multiple fixtures can share a role; available lights remain unused.
 
 ![Clean first-run light configuration](docs/screenshots/light-settings.jpg)

@@ -13,3 +13,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test with preinstalled Python (no dependency downloads)
         run: python3 -m unittest discover -v
+      - name: Test light configuration interaction
+        run: node --test tests/light-settings.test.cjs
